@@ -1,6 +1,6 @@
-export {add, subtract, multiply, divide}
+export {addition, subtract, multiply, divide}
 
-const add = function(num1, num2) {
+const addition = function(num1, num2) {
   return num1 + num2;
 	
 };
@@ -29,7 +29,7 @@ const multiply = function(...args) {
   for (let i = 0; i < len; i++) {
     finalProduct *= args[i]
   }
-  return finalProduct
+  return Number(finalProduct.toFixed(14))
 };
 
 const power = function(base, exponent) {
@@ -50,6 +50,9 @@ const factorial = function(num) {
 	
 };
 
-const divide = (dividend, divisor) => { return (dividend / divisor) }
+const divide = (dividend, divisor) => {
+  let answer = dividend / divisor; 
+  return Number(answer.toFixed(14));
+}
 
 // Do not edit below this line

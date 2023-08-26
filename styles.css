@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    height: 50vh;
+    height: 80vh;
     width: 40vw;
     display: flex;
     justify-content: center;
@@ -22,6 +22,7 @@ body {
     background-color: black;
     border-radius: 10px;
     padding: 8px;
+    padding-top: 16px;
 }
 
 .display {
@@ -34,10 +35,22 @@ body {
     color: white;
     font-size: 32px;
     font-weight: bold;
-    display: flex;
-    justify-content: end;
-    align-items: end;
+    border: 2px solid red;
 }
+    .summary {
+        height: 30%;
+        width: 95%;
+        font-size: 16px;
+        text-align: end;
+        margin-right: 8px;
+    }
+    .current {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
 
 .abort {
     width: 90%;
@@ -45,14 +58,18 @@ body {
     margin: 8px 0;
     display: flex;
     justify-content: space-around;
+    padding-bottom: 16px;
 }
     .cancel {
     border: 2px solid pink;
     width: 40%;
     background-color: rgb(224, 86, 86);
-    text-align: center;
     font-size: 24px;
-    padding: 5px;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
     .clear {
         border: 2px solid pink;
@@ -60,7 +77,10 @@ body {
         background-color: rgb(224, 86, 86);
         font-size: 24px;
         padding: 5px;
-        text-align: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 .actions {
@@ -89,11 +109,20 @@ body {
             background-color: rgb(46, 43, 43);
             color: white;
             font-size: 36px;
-            text-align: center;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn:hover {
+            background-color: rgb(15, 13, 13);
         }
         .equalBtn {
             background-color: aqua;
             color: black
+        }
+        .equalBtn:hover {
+            background-color: rgb(18, 139, 139);
         }
     .extra {
         height: 25%;
@@ -103,6 +132,10 @@ body {
         gap: 16px;
         padding-top: 8px;
     }
+        .disabled-dot {
+            pointer-events: none;
+            opacity: 0.2;
+        }
     .extra > .btn {
         height: 75%;
     }
@@ -117,4 +150,7 @@ body {
             width: 100%;
             height: 20%;
             background-color: rgb(114, 109, 109);
+        }
+        .operators > .btn:hover {
+            background-color: rgb(52, 51, 51);
         }
